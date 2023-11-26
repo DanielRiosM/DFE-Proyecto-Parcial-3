@@ -47,6 +47,7 @@ export class ExplorerCatalogoComponent {
     this.nuevoJuego.id = catalogoJuego.id;
     this.nuevoJuego.juego = catalogoJuego.title;
     this.nuevoJuego.precio = catalogoJuego.price;
+    this.nuevoJuego.fecha = catalogoJuego.fecha;
   }
 
   onEnviarVenta(juego: Catalogo) {
@@ -60,7 +61,7 @@ export class ExplorerCatalogoComponent {
         telefono: 6624715600,
         juego: juego.title,
         vendedor: 'vendedor ',
-        fecha: '25/11/2023',
+        fecha: juego.fecha,
         precio: juego.price,
         notas: 'Excelente',
         estatus: JuegoEstatus.Disponible

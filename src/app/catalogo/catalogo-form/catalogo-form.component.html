@@ -4,7 +4,9 @@
         <h2>{{ juego.id }}</h2>
         <h2>{{ juego.title }}</h2>
         <p>Plataforma: {{ juego.platform }}</p>
+        <p>fecha: {{ juego.fecha | date}}</p>
         <h2>$: {{ juego.price }}</h2>
+        
 
         <button (click)="onEnviarVenta(juego)">Enviar a Ventas</button>
     </div>

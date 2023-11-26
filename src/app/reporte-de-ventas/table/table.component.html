@@ -25,7 +25,7 @@
                 <td>{{ juego.telefono }}</td>
                 <td>{{ juego.notas }}</td>
                 <td>{{ juego.precio | currency }}</td>
-                <td>{{juego.fecha}}</td>
+                <td>{{juego.fecha | date}}</td>
                 <td>{{ !!juego.cliente ? juego.cliente : 'N/A' }}</td>
                 <td>{{ !!juego.vendedor ? juego.vendedor : 'N/A' }}</td>
             </tr>
