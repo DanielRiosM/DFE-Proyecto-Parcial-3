@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { ReporteDeVentasModule } from './reporte-de-ventas/reporte-de-ventas.module';
+import { CatalogoModule } from './catalogo/catalogo.module';
 import { DataService } from './services/data.service';
 
 @NgModule({
@@ -18,7 +19,8 @@ import { DataService } from './services/data.service';
     HttpClientModule,
 
     DashboardModule,
-    ReporteDeVentasModule
+    ReporteDeVentasModule,
+    CatalogoModule
   ],
   providers: [DataService],
   bootstrap: [AppComponent]

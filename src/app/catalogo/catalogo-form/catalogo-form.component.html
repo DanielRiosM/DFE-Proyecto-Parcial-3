@@ -1,0 +1,11 @@
+<div class="game-list">
+    <div *ngFor="let juego of games" class="game">
+        <img [src]="'/assets/img/' + juego.image" />
+        <h2>{{ juego.id }}</h2>
+        <h2>{{ juego.title }}</h2>
+        <p>Plataforma: {{ juego.platform }}</p>
+        <h2>$: {{ juego.price }}</h2>
+
+        <button (click)="onEnviarVenta(juego)">Enviar a Ventas</button>
+    </div>
+</div>

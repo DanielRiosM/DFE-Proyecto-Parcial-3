@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { JuegoInterface } from 'src/app/services/juego.interface';
 
 @Component({
   selector: 'app-resume',
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./resume.component.scss']
 })
 export class ResumeComponent {
+  @Input() mensaje: string = '';
+  @Input() data!:JuegoInterface[];
+  @Input() totalSold!:number;
+  @Input() importe:string ='';
+  ngOnInit(){
+    console.log("object");
+    
+  }
 
 }

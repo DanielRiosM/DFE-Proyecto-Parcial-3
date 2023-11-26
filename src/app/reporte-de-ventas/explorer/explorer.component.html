@@ -1,9 +1,13 @@
-<p>explorer works!</p>
+<h1>Lista de Ventas</h1>
 
-<app-resume>
+<app-table
+[listadoVentas]="listadoVentas"
+[cargandoVentas]="cargandoVentas">
+</app-table>
+
+<app-resume
+[mensaje]= "mensaje"
+[importe] = "importe">
     
 </app-resume>
 
-<app-table>
-
-</app-table>

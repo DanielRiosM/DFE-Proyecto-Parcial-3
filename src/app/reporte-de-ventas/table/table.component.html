@@ -1,1 +1,48 @@
-<p>table works!</p>
+<div class="table-container">
+
+    <table>
+
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Estado</th>
+                <th>Producto</th>
+                <th>Telefono</th>
+                <th>Notas</th>
+                <th>Precio</th>
+                <th>Fecha de venta</th>
+                <th>Cliente</th>
+                <th>Vendedor</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr *ngFor="let juego of listadoVentas" (click)="ventaSelecionada = juego">
+                <td> <strong>{{ juego.id }}</strong> </td>
+                <td> <span class="tag">{{ juego.estatus }}</span> </td>
+                <td>{{ juego.juego }}</td>
+                <td>{{ juego.telefono }}</td>
+                <td>{{ juego.notas }}</td>
+                <td>{{ juego.precio | currency }}</td>
+                <td>{{juego.fecha}}</td>
+                <td>{{ !!juego.cliente ? juego.cliente : 'N/A' }}</td>
+                <td>{{ !!juego.vendedor ? juego.vendedor : 'N/A' }}</td>
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</div>
+
+<div class="message" *ngIf="listadoVentas.length === 0">
+    <p>{{ cargandoVentas ? 'Cargando...' : 'No se encontraron registros...'}}</p>
+</div>
+
+
+<app-detalles *ngIf="ventaSelecionada !== null" 
+[juego]="ventaSelecionada" 
+(close)="ventaSelecionada = null">
+
+</app-detalles>

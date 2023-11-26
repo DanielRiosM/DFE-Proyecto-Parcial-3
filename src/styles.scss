@@ -7,3 +7,8 @@
 @import './assets/styles/header.scss';
 @import './assets/styles/modal.scss';
 @import './assets/styles/table.scss';
+@import './assets/styles/game-list.scss';
+@import './assets/styles/footer.scss';
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
